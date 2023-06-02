@@ -4,20 +4,20 @@
 		"alwaysUp" : true,
 		"far" : 1000.0,
 		"fov" : 80.0,
-		"near" : 0.0099999997764825821,
+		"near" : 0.10000000149011612,
 		"orientation" : 
 		{
-			"w" : -0.12835067510604858,
-			"x" : 0.0036387857981026173,
-			"y" : -0.99167150259017944,
-			"z" : -0.028119012713432312
+			"w" : 0.96351534128189087,
+			"x" : -0.10765010118484497,
+			"y" : -0.24358291923999786,
+			"z" : -0.027214707806706429
 		},
 		"parent" : "player",
 		"position" : 
 		{
-			"x" : 0.0,
-			"y" : 2.7000000476837158,
-			"z" : 0.0
+			"x" : -11.562241554260254,
+			"y" : 9.4949636459350586,
+			"z" : 19.437295913696289
 		},
 		"speed" : 1.0
 	},
@@ -46,12 +46,12 @@
 			},
 			"name" : "shadowSource",
 			"outerCutoff" : 0.0,
-			"perspectiveShadows" : false,
+			"perspectiveShadows" : true,
 			"position" : 
 			{
-				"x" : 50.099998474121094,
-				"y" : 100.0,
-				"z" : -50.099998474121094
+				"x" : 30.100000381469727,
+				"y" : 50.0,
+				"z" : -30.100000381469727
 			}
 		}
 	],
@@ -60,9 +60,9 @@
 		{
 			"color" : 
 			{
-				"b" : 1.0,
+				"b" : 0.27058824896812439,
 				"g" : 1.0,
-				"r" : 1.0
+				"r" : 0.0
 			},
 			"emission" : 
 			{
@@ -74,7 +74,7 @@
 			{
 				"value" : 0.5
 			},
-			"name" : "default",
+			"name" : "material1",
 			"opacity" : 
 			{
 				"value" : 1.0
@@ -87,7 +87,9 @@
 		{
 			"color" : 
 			{
-				"filename" : "assets/textures/0000.bmp"
+				"b" : 0.0,
+				"g" : 0.0,
+				"r" : 1.0
 			},
 			"emission" : 
 			{
@@ -106,7 +108,34 @@
 			},
 			"roughness" : 
 			{
-				"value" : 0.31999999284744263
+				"value" : 0.50999999046325684
+			}
+		},
+		{
+			"color" : 
+			{
+				"b" : 1.0,
+				"g" : 0.85882353782653809,
+				"r" : 0.0
+			},
+			"emission" : 
+			{
+				"b" : 0.0,
+				"g" : 0.0,
+				"r" : 0.0
+			},
+			"metalness" : 
+			{
+				"value" : 0.0
+			},
+			"name" : "default",
+			"opacity" : 
+			{
+				"value" : 1.0
+			},
+			"roughness" : 
+			{
+				"value" : 1.0
 			}
 		}
 	],
@@ -115,12 +144,50 @@
 		"models" : 
 		[
 			{
+				"drawable" : true,
+				"filename" : "",
+				"immediateLoad" : true,
+				"material" : 
+				[
+					{
+						"name" : "default"
+					}
+				],
+				"name" : "cube",
+				"orientation" : 
+				{
+					"w" : 1.0,
+					"x" : 0.0,
+					"y" : 0.0,
+					"z" : 0.0
+				},
+				"position" : 
+				{
+					"x" : 0.0,
+					"y" : 0.0,
+					"z" : 0.0
+				},
+				"rigidBody" : 
+				{
+					"active" : true,
+					"collider" : 1,
+					"type" : 0
+				},
+				"size" : 
+				{
+					"x" : 100.0,
+					"y" : 1.0,
+					"z" : 100.0
+				}
+			},
+			{
 				"children" : 
 				[
 					"camera"
 				],
 				"drawable" : false,
 				"filename" : "",
+				"immediateLoad" : true,
 				"material" : 
 				[
 					{
@@ -137,14 +204,14 @@
 				},
 				"position" : 
 				{
-					"x" : 12.682900428771973,
-					"y" : 3.6992900371551514,
-					"z" : -15.264599800109863
+					"x" : 0.0,
+					"y" : 4.0,
+					"z" : 0.0
 				},
 				"rigidBody" : 
 				{
 					"active" : true,
-					"collider" : 3,
+					"collider" : 1,
 					"type" : 2
 				},
 				"size" : 
@@ -157,85 +224,51 @@
 			{
 				"drawable" : true,
 				"filename" : "",
-				"material" : 
-				[
-					{
-						"name" : "default"
-					}
-				],
-				"name" : "ground",
-				"orientation" : 
-				{
-					"w" : 1.0,
-					"x" : 0.0,
-					"y" : 0.0,
-					"z" : 0.0
-				},
-				"position" : 
-				{
-					"x" : 0.0,
-					"y" : 0.0,
-					"z" : 0.0
-				},
-				"rigidBody" : 
-				{
-					"active" : true,
-					"collider" : 1,
-					"type" : 0
-				},
-				"size" : 
-				{
-					"x" : 30.0,
-					"y" : 1.0,
-					"z" : 30.0
-				}
-			},
-			{
-				"drawable" : true,
-				"filename" : "",
-				"material" : 
-				[
-					{
-						"name" : "default"
-					}
-				],
-				"name" : "wall",
-				"orientation" : 
-				{
-					"w" : 1.0,
-					"x" : 0.0,
-					"y" : 0.0,
-					"z" : 0.0
-				},
-				"position" : 
-				{
-					"x" : 9.1000003814697266,
-					"y" : 4.5,
-					"z" : 0.0
-				},
-				"rigidBody" : 
-				{
-					"active" : true,
-					"collider" : 1,
-					"type" : 0
-				},
-				"size" : 
-				{
-					"x" : 1.1000000238418579,
-					"y" : 3.2000000476837158,
-					"z" : 14.300000190734863
-				}
-			},
-			{
-				"drawable" : true,
-				"filename" : "assets/models/normal.obj",
+				"immediateLoad" : true,
 				"material" : 
 				[
 					{
 						"name" : "material"
 					}
 				],
-				"name" : "car",
+				"name" : "cube1",
+				"orientation" : 
+				{
+					"w" : 0.98480778932571411,
+					"x" : 0.17364819347858429,
+					"y" : 0.0,
+					"z" : 0.0
+				},
+				"position" : 
+				{
+					"x" : 0.0,
+					"y" : 3.0,
+					"z" : -20.0
+				},
+				"rigidBody" : 
+				{
+					"active" : true,
+					"collider" : 1,
+					"type" : 0
+				},
+				"size" : 
+				{
+					"x" : 10.0,
+					"y" : 1.0,
+					"z" : 10.0
+				}
+			},
+			{
+				"drawable" : true,
+				"filename" : "",
+				"immediateLoad" : true,
+				"material" : 
+				[
+					{
+						"name" : "material1"
+					}
+				],
+				"name" : "cube2",
 				"orientation" : 
 				{
 					"w" : 1.0,
@@ -246,7 +279,7 @@
 				"position" : 
 				{
 					"x" : 0.0,
-					"y" : 4.5,
+					"y" : 10.0,
 					"z" : 0.0
 				},
 				"rigidBody" : 
