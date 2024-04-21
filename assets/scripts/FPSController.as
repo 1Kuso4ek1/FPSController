@@ -49,7 +49,7 @@ class FPSController
 
     void UpdateIsOnGround()
     {
-        Ray ray(playerModel.GetPosition(), playerModel.GetPosition() - Vector3(0, playerModel.GetSize().y + (!canJump ? 0.05 : 1), 0) + Vector3(0, 0, (Game::camera.GetOrientation() * Vector3(0, 0, (!canJump ? -0.05 : -0.5))).z));
+        Ray ray(playerModel.GetPosition(), playerModel.GetPosition() - Vector3(0, playerModel.GetSize().y + (!canJump ? 0.2 : 1), 0) + Vector3(0, 0, (Game::camera.GetOrientation() * Vector3(0, 0, (!canJump ? -0.05 : -0.5))).z));
         RaycastInfo info;
 
         int count = 0;
@@ -69,6 +69,11 @@ class FPSController
 
         for(uint i = 0; i < ground.Size(); i++)
             ground[i].GetRigidBody().setMaterial(mat);
+    }
+
+    Model@ opImplCast()
+    {
+        return playerModel;
     }
 
     bool IsMoving()
