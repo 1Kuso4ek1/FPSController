@@ -23,7 +23,7 @@ class FPSController
         moving = v.length() > 0;
 
         UpdateIsOnGround();
-        playerRB.applyWorldForceAtCenterOfMass(v);
+        playerRB.applyWorldForceAtCenterOfMass(onGround ? v : v / 10.0);
 
         auto vel = playerRB.getLinearVelocity();
         if(vel.x > speed) vel.x = speed; if(vel.z > speed) vel.z = speed;

@@ -8,8 +8,11 @@ void Start()
 {
     Game::manageCameraMovement = false;
 	Game::camera.SetPosition(Vector3(0, 2.7, 0));
-	
-    @player = @FPSController(Game::scene.GetModel("player"), Game::scene.GetModelGroup("ground"), 12.0, 500.0);
+
+    for(uint i = 0; i < 10; i++)
+        Game::scene.CloneModel(Game::scene.GetModel("cube2:ground"), true, "cube2-copy" + to_string(i) + ":ground");
+
+    @player = @FPSController(Game::scene.GetModel("player"), Game::scene.GetModelGroup("ground"), 12.0, 700.0);
 }
 
 void Loop()

@@ -2,21 +2,21 @@
 	"camera" : 
 	{
 		"alwaysUp" : true,
-		"far" : 1000.0,
+		"far" : 10000.0,
 		"fov" : 80.0,
 		"near" : 0.10000000149011612,
 		"orientation" : 
 		{
-			"w" : 0.95662695169448853,
-			"x" : -0.18270239233970642,
-			"y" : 0.22305549681186676,
-			"z" : 0.042600210756063461
+			"w" : -0.91757106781005859,
+			"x" : 0.12487634271383286,
+			"y" : -0.37422138452529907,
+			"z" : -0.050929013639688492
 		},
 		"position" : 
 		{
-			"x" : 20.878877639770508,
-			"y" : 19.687007904052734,
-			"z" : 44.457046508789062
+			"x" : 21.972017288208008,
+			"y" : 23.579555511474609,
+			"z" : 19.115411758422852
 		},
 		"speed" : 1.0
 	},
@@ -58,11 +58,13 @@
 	"materials" : 
 	[
 		{
+			"ao" : 
+			{
+				"filename" : "assets/textures/Concrete031_2K-JPG_AmbientOcclusion.jpg"
+			},
 			"color" : 
 			{
-				"b" : 1.0,
-				"g" : 0.85882353782653809,
-				"r" : 0.0
+				"filename" : "assets/textures/Concrete031_2K-JPG_Color.jpg"
 			},
 			"emission" : 
 			{
@@ -76,21 +78,57 @@
 				"value" : 0.0
 			},
 			"name" : "default",
+			"normal" : 
+			{
+				"filename" : "assets/textures/Concrete031_2K-JPG_NormalGL.jpg"
+			},
 			"opacity" : 
 			{
 				"value" : 1.0
 			},
 			"roughness" : 
 			{
-				"value" : 1.0
+				"filename" : "assets/textures/Concrete031_2K-JPG_Roughness.jpg"
 			}
 		},
 		{
 			"color" : 
 			{
+				"filename" : "assets/textures/MetalPlates001_2K-JPG_Color.jpg"
+			},
+			"emission" : 
+			{
 				"b" : 0.0,
 				"g" : 0.0,
-				"r" : 1.0
+				"r" : 0.0,
+				"strength" : 0.0
+			},
+			"metalness" : 
+			{
+				"filename" : "assets/textures/MetalPlates001_2K-JPG_Metalness.jpg"
+			},
+			"name" : "material",
+			"normal" : 
+			{
+				"filename" : "assets/textures/MetalPlates001_2K-JPG_NormalGL.jpg"
+			},
+			"opacity" : 
+			{
+				"value" : 1.0
+			},
+			"roughness" : 
+			{
+				"filename" : "assets/textures/MetalPlates001_2K-JPG_Roughness.jpg"
+			}
+		},
+		{
+			"ao" : 
+			{
+				"filename" : "assets/textures/Tiles107_2K-JPG_AmbientOcclusion.jpg"
+			},
+			"color" : 
+			{
+				"filename" : "assets/textures/Tiles107_2K-JPG_Color.jpg"
 			},
 			"emission" : 
 			{
@@ -103,50 +141,24 @@
 			{
 				"value" : 0.0
 			},
-			"name" : "material",
-			"opacity" : 
-			{
-				"value" : 1.0
-			},
-			"roughness" : 
-			{
-				"value" : 1.0
-			}
-		},
-		{
-			"color" : 
-			{
-				"b" : 0.27058824896812439,
-				"g" : 1.0,
-				"r" : 0.0
-			},
-			"emission" : 
-			{
-				"b" : 0.0,
-				"g" : 0.0,
-				"r" : 0.0,
-				"strength" : 0.0
-			},
-			"metalness" : 
-			{
-				"value" : 0.5
-			},
 			"name" : "material1",
+			"normal" : 
+			{
+				"filename" : "assets/textures/Tiles107_2K-JPG_NormalGL.jpg"
+			},
 			"opacity" : 
 			{
 				"value" : 1.0
 			},
 			"roughness" : 
 			{
-				"value" : 0.5
+				"filename" : "assets/textures/Tiles107_2K-JPG_Roughness.jpg"
 			}
 		},
 		{
 			"color" : 
 			{
-				"b" : 0.0,
-				"g" : 1.0,
-				"r" : 0.0
+				"filename" : "assets/textures/Grass002_4K-JPG_Color.jpg"
 			},
 			"emission" : 
 			{
@@ -160,13 +172,17 @@
 				"value" : 0.0
 			},
 			"name" : "material2",
+			"normal" : 
+			{
+				"filename" : "assets/textures/Grass002_4K-JPG_NormalGL.jpg"
+			},
 			"opacity" : 
 			{
 				"value" : 1.0
 			},
 			"roughness" : 
 			{
-				"value" : 1.0
+				"filename" : "assets/textures/Grass002_4K-JPG_Roughness.jpg"
 			}
 		}
 	],
@@ -243,9 +259,9 @@
 				},
 				"size" : 
 				{
-					"x" : 1.0,
-					"y" : 1.0,
-					"z" : 1.0
+					"x" : 2.0,
+					"y" : 2.0,
+					"z" : 2.0
 				}
 			},
 			{
